@@ -1,0 +1,61 @@
+site_name: BitsyCasa
+site_description: A tiny Raspberry Pi 4B home server with a Waveshare 3.97" e-paper dashboard, nicknamed Geoff.
+# TODO: confirm. Set these to your real repo/site before publishing.
+# site_url: https://<your-github-user>.github.io/bitsycasa/
+# repo_url: https://github.com/<your-github-user>/bitsycasa
+# repo_name: <your-github-user>/bitsycasa
+docs_dir: docs
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - search.highlight
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Hardware: hardware.md
+  - Software stack: software.md
+  - Dashboard: dashboard.md
+  - File server: fileserver.md
+  - Troubleshooting: troubleshooting.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+plugins:
+  - search
